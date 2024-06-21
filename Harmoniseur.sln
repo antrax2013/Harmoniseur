@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solfege.Sdk", "harmonizer\Solfege.Sdk.csproj", "{A85CB632-6383-48F5-A94C-C6E8EE310D9C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solfege.Sdk.Test", "harmonize.test\Solfege.Sdk.Test.csproj", "{78398DD3-4D68-421F-A4E8-C1DE8C84574D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5720C585-AB75-4AD1-9D29-4E91B2F8C143}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9D3BE19F-8E41-4BD8-92D8-3C5FB1D9BDA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A85CB632-6383-48F5-A94C-C6E8EE310D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85CB632-6383-48F5-A94C-C6E8EE310D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85CB632-6383-48F5-A94C-C6E8EE310D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A85CB632-6383-48F5-A94C-C6E8EE310D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78398DD3-4D68-421F-A4E8-C1DE8C84574D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78398DD3-4D68-421F-A4E8-C1DE8C84574D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78398DD3-4D68-421F-A4E8-C1DE8C84574D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78398DD3-4D68-421F-A4E8-C1DE8C84574D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A85CB632-6383-48F5-A94C-C6E8EE310D9C} = {5720C585-AB75-4AD1-9D29-4E91B2F8C143}
+		{78398DD3-4D68-421F-A4E8-C1DE8C84574D} = {9D3BE19F-8E41-4BD8-92D8-3C5FB1D9BDA2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C0A621A-107A-4F22-9DBF-CFDBE09A2BCA}
+	EndGlobalSection
+EndGlobal
