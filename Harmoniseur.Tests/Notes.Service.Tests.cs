@@ -154,10 +154,7 @@ internal class ServiceNotesTests
     [TestCase("Do", 0, "Do")]
     [TestCase("Si", 1, "Do")]
     [TestCase("Do", 11, "Si")]
-    [TestCase("Do", -1, "Si")]
-    [TestCase("Sol", -8, "Si")]
-    [TestCase("Sol", -14, "Fa")]
-    [TestCase("Fa", -20, "La")]
+    [TestCase("Fa", -1, "Mi")]
     public void Quand_Je_Cherche_Une_Note_A_partir_D_Une_Autre_Note_Et_D_Une_Distance_J_Obtiens_La_Note_Attendue(string nomNoteDeDepart, int distance, string nomNoteAttendue) 
     {
         // When

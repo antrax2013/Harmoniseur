@@ -16,6 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extras", "Extras", "{C15303
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{667FBD09-3E30-4282-A31E-53B39FB37E38}"
+	ProjectSection(SolutionItems) = preProject
+		.config\dotnet-tools.json = .config\dotnet-tools.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A85CB632-6383-48F5-A94C-C6E8EE310D9C} = {5720C585-AB75-4AD1-9D29-4E91B2F8C143}
 		{78398DD3-4D68-421F-A4E8-C1DE8C84574D} = {9D3BE19F-8E41-4BD8-92D8-3C5FB1D9BDA2}
+		{667FBD09-3E30-4282-A31E-53B39FB37E38} = {C153036F-8C4F-4516-B4D6-BE5704175392}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C0A621A-107A-4F22-9DBF-CFDBE09A2BCA}

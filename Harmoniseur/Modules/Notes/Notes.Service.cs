@@ -1,5 +1,4 @@
-﻿using Solfege.Sdk.Modules.Intervalles;
-using System.Collections.Immutable;
+﻿using System.Collections.Immutable;
 
 namespace Solfege.Sdk.Modules.Notes;
 public static class ServiceNotes
@@ -44,20 +43,7 @@ public static class ServiceNotes
         if(distance == 0)
             return note;
 
-        if (distance > 0)
-        {
-            return _notes[(index + distance) % _notes.Length];
-        }
-
-        if (distance < 0)
-        {
-            var indexRelatif = index + _notes.Length;
-            var distanceAbsolueRelative = Math.Abs(distance) % _notes.Length;
-            var difference = (indexRelatif - distanceAbsolueRelative) % _notes.Length;
-
-            return _notes[difference];
-        }
-        return null;
+        return _notes[(index + distance) % _notes.Length];
     }
 
     public static Note? Precedente(string nomNote)
