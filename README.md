@@ -12,8 +12,8 @@ En plus il n'a eu le temps pousser ses modifs dans le repos. Tu es le seul qui p
 - Il y a un bug, quand on demande recherche une note à l'octave inférieur ne marche pas.
   - __Do -6 ça devrait faire Sol mais à la place ça lève une exception: Out of range__
 - On aurait besoin d'ajouter la possibilité d'altérer les notes :
-	- `#` : distance +1
-	- `b` : distance -1
+	- dièse `♯` : distance +1
+	- bémol `♭` : distance -1
 
 # Auteur
 [![build](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cyril-cophignon-b58b5a5b/)
