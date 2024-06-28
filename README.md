@@ -1,7 +1,7 @@
 # Harmoniseur
 
 ## Contexte
-Notre collégue RéMi a chutté lourdement durant ses vacances, le Sol était glissant. Il sera indisponible pour une durée indéterminée. Il était le seul développeur sur cette application. 
+Notre collégue RéMi, alias tonton, a chutté lourdement durant ses vacances, le Sol était glissant. Il sera indisponible pour une durée indéterminée. Il était le seul développeur sur cette application. 
 
 Pour être franc, on l'a décommissionné, mais lorsqu'on l'a fait, on s'est rendu compte que beaucoup de monde l'utilisait. De plus on a appris que les utilisateurs attendent de nouvelles fonctionnalités. 
 Rémi était sur le coup, on ne le savait pas. 
@@ -22,7 +22,7 @@ cf :
 ### Remarques
 - Pour simplifier les choses, RéMi a choisi de calculer les distances en demi-ton. Ainsi on a des distances en nombre entier.
 - Il y a des tests mais on ne sait pas s'ils sont exhaustifs
-- Il y a un bug, quand on recherche une note à partir d'une distance à l'octave inférieur ne marche pas.
+- Il y a un bug, quand on recherche une note à partir d'une distance à l'octave inférieur ça ne marche pas.
   - _Do -6 ça devrait faire Sol mais à la place ça lève une exception: Out of range_
 
 ### Nouvelle fonctionnalité 
@@ -41,7 +41,7 @@ Pour installer et configurer la génération d'un rapport de couverture de tests
   - `dotnet add package ReportGenerator --version 5.3.6`
 -  à la racine du projet lancer la commande ci-dessous pour lancer les tests et générer le rapport de couverture
   - lancer les tests et analyser la couverture : `dotnet-coverage collect 'dotnet test --no-restore --verbosity normal' -f xml -o 'coverage.xml'`
-  - générer un rapport html lisible : `dotnet $(UserProfile)\.nuget\packages\reportgenerator\5.3.6\tools\net6.0\ReportGenerator.dll -reports:cobertura.xml -targetdir:coveragereport -reporttypes:Html_Dark`
+  - générer un rapport html lisible : `dotnet $(UserProfile)\.nuget\packages\reportgenerator\5.3.6\tools\net6.0\ReportGenerator.dll -reports:coverage.xml -targetdir:coveragereport -reporttypes:Html_Dark`
 
 cf : [documentation](https://reportgenerator.io/usage)
 
