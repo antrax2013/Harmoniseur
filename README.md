@@ -1,29 +1,35 @@
 # Harmoniseur
 
 ## Contexte
-Notre collégue RéMi, alias tonton, a chutté lourdement durant ses vacances, le Sol était glissant. Il sera indisponible pour une durée indéterminée. Il était le seul développeur sur cette application. 
+Notre collégue Rémi Solla, alias tonton, a chutté lourdement durant ses vacances, lors d'une partie de pèche la Sole était glissant, elle s'est débattue, Rémi est tombé. Il sera indisponible pour une durée indéterminée. Il était le seul développeur sur cette application. 
 
 Pour être franc, on l'a décommissionné, mais lorsqu'on l'a fait, on s'est rendu compte que beaucoup de monde l'utilisait. De plus on a appris que les utilisateurs attendent de nouvelles fonctionnalités. 
 Rémi était sur le coup, on ne le savait pas. 
 En plus il n'a eu le temps pousser ses modifs dans le repos. Tu es le seul qui puisse nous aider.
 
+## Métier
+L'application est capable à partir :  
+-  d'une #note# et d'une distance en 1/2 ton de retourner la note recherchée
+- à partir d'un esemble d'#intervalles# et d'une tonique, elle est capable de donner les notes de la #gamme#
+
 ## Compléments
 Pour vous aider :
 
 ### Les notes
-| 0  | 1   | 2  | 3   | 4  | 5  | 6   | 7   | 8    | 9  | 10  | 11 |
-|----|-----|----|-----|----|----|-----|-----|------|----|-----|----|
-| Do | Do# | Ré | Ré# | Mi | Fa | Fa# | Sol | Sol# | La | La# | Si |
+| 0  | 1    | 2   | 3   | 4   | 5  | 6    | 7   | 8    | 9  | 10  | 11 |
+|----|------|-----|-----|-----|----|------|-----|------|----|-----|----|
+| Do | Do#  | Ré  | Ré# | Mi  | Fa | Fa#  | Sol | Sol# | La | La# | Si |
+| Do | Ré♭ | Ré  | Mi♭ | Mi  | Fa | Sil♭| Sol | La♭ | La | Si♭ | Si |
 
 cf : 
 - [les intervalles](https://www.apprendrelesolfege.com/les-intervalles)
 - [les gammes](https://www.apprendrelesolfege.com/les-gammes)
 
 ### Remarques
-- Pour simplifier les choses, RéMi a choisi de calculer les distances en demi-ton. Ainsi on a des distances en nombre entier.
+- Pour simplifier les choses, Rémi a choisi de calculer les distances en demi-ton. Ainsi on a des distances en nombre entier.
 - Il y a des tests mais on ne sait pas s'ils sont exhaustifs
 - Il y a un bug, quand on recherche une note à partir d'une distance à l'octave inférieur ça ne marche pas.
-  - _Do -6 ça devrait faire Sol mais à la place ça lève une exception: Out of range_
+  - _Do -5 ça devrait faire Sol mais à la place ça lève une exception: Out of range_
 
 ### Nouvelle fonctionnalité 
 - On aurait besoin d'ajouter la possibilité d'altérer les notes :
