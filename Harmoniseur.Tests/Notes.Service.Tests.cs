@@ -141,7 +141,7 @@ internal class ServiceNotesTests
         Check.That(distance).IsEqualTo(distanceAttendue);
     }
 
-    [TestCase("Un note qui n'existe pas", "Ré")]
+    [TestCase("Une note qui n'existe pas", "Ré")]
     [TestCase("Ré", "Une note qui n'existe pas")]
     public void Quand_Je_Cherche_La_Distance_Entre_1_Note_Qui_Existe_Et_Une_Qui_N_Existe_Pas_J_Obtiens_Null(string nomNoteDeDepart, string nomNoteDArrivee)
     {
@@ -163,6 +163,40 @@ internal class ServiceNotesTests
 
         // Then
         Check.That(note?.Nom).IsEqualTo(nomNoteAttendue);
+    }
+
+    [TestCase]
+    public void Quand_Je_Cherche_Une_Note_A_partir_D_Une_Note_Qui_N_Existe_Pas_Et_D_Une_Distance_J_Obtiens_Null()
+    {
+        // When
+        Note? note = ServiceNotes.Chercher("Une note qui n'existe pas", 1);
+
+        // Then
+        Check.That(note?.Nom).IsNull();
+    }
+
+    [TestCase]
+    public void Quand_Je_Cherche_Une_Note_A_partir_D_Une_Note_Qui_Existe_Et_D_Une_Distance_J_Obtiens_Null()
+    {
+        // When
+        Note fa = ServiceNotes.Chercher("Fa")!;
+        int distance = 4;
+        Note note = fa.Chercher(distance)!;
+
+        // Then
+        Check.That(note?.Nom).IsEqualTo("La");
+    }
+
+    [TestCase]
+    public void Quand_Je_Cherche_Une_Note_A_partir_D_Une_Note_Iconnue_Qui_Existe_Et_D_Une_Distance_J_Obtiens_Null()
+    {
+        // When
+        Note? iconnue = ServiceNotes.Chercher("Une note qui n'existe pas")!;
+        int distance = 4;
+        Note? note = iconnue!.Chercher(distance);
+
+        // Then
+        Check.That(note?.Nom).IsNull();
     }
 
 }
