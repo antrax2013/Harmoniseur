@@ -15,9 +15,10 @@ internal class ServiceNotesTests
     [TestCase("DO")]
     [TestCase("do")]
     [TestCase("dO")]
-    public void Quand_Je_Cherche_Une_Note_Qui_Existe_J_Obtiens_La_Note_Attendue(string nomNote) {
+    public void Quand_Je_Cherche_Une_Note_Qui_Existe_J_Obtiens_La_Note_Attendue(string nomNote)
+    {
         // When
-        var note = ServiceNotes.Chercher(nomNote);
+        Note? note = ServiceNotes.Chercher(nomNote);
 
         // Then
         Check.That(note).IsNotNull();
@@ -32,7 +33,7 @@ internal class ServiceNotesTests
     [TestCase("La", "La")]
     [TestCase("SI", "Si")]
     [TestCase("DO", "Do")]
-    [TestCase("do","Do")]
+    [TestCase("do", "Do")]
     [TestCase("dO", "Do")]
     [TestCase("Réb", "Do#")]
     [TestCase("Mib", "Ré#")]
@@ -43,7 +44,7 @@ internal class ServiceNotesTests
     public void Quand_Je_Cherche_Une_Note_Qui_Existe_Par_Son_Nom_Inverse_J_Obtiens_La_Note_Attendue(string nomNote, string nomAttendu)
     {
         // When
-        var note = ServiceNotes.Chercher(nomNote);
+        Note? note = ServiceNotes.Chercher(nomNote);
 
         // Then
         Check.That(note).IsNotNull();
@@ -54,7 +55,7 @@ internal class ServiceNotesTests
     public void Quand_Je_Cherche_Une_Note_Qui_N_Existe_Pas_J_Obtiens_Null()
     {
         // When
-        var note = ServiceNotes.Chercher("Une Note qui n'existe pas");
+        Note? note = ServiceNotes.Chercher("Une Note qui n'existe pas");
 
         // Then
         Check.That(note).IsNull();
@@ -75,7 +76,7 @@ internal class ServiceNotesTests
     public void Quand_Je_Cherche_La_Note_Suivante_D_Une_Note_Qui_Existe_Par_Son_Nom_J_Obtiens_La_Note_Attendue(string nomNote, string nomAttendu)
     {
         // When
-        var noteObetenue = ServiceNotes.Suivante(nomNote);
+        Note? noteObetenue = ServiceNotes.Suivante(nomNote);
 
         // Then
         Check.That(noteObetenue).IsNotNull();
@@ -86,7 +87,7 @@ internal class ServiceNotesTests
     public void Quand_Je_Cherche_La_Note_Suivante_D_Une_Note_Qui_N_Existe_Pas_J_Obtiens_Null()
     {
         // When
-        var note = ServiceNotes.Suivante("Une Note qui n'existe pas");
+        Note? note = ServiceNotes.Suivante("Une Note qui n'existe pas");
 
         // Then
         Check.That(note).IsNull();
@@ -94,11 +95,11 @@ internal class ServiceNotesTests
 
     [TestCase("Do#", "Do")]
     [TestCase("Ré", "Do#")]
-    [TestCase("Ré#", "Ré" )]
+    [TestCase("Ré#", "Ré")]
     [TestCase("Mi", "Ré#")]
-    [TestCase("Fa", "Mi" )]
+    [TestCase("Fa", "Mi")]
     [TestCase("Fa#", "Fa")]
-    [TestCase("Sol", "Fa#" )]
+    [TestCase("Sol", "Fa#")]
     [TestCase("Sol#", "Sol")]
     [TestCase("La", "Sol#")]
     [TestCase("La#", "La")]
@@ -107,7 +108,7 @@ internal class ServiceNotesTests
     public void Quand_Je_Cherche_La_Note_Precedente_D_Une_Note_Qui_Existe_Par_Son_Nom_J_Obtiens_La_Note_Attendue(string nomNote, string nomAttendu)
     {
         // When
-        var noteObetenue = ServiceNotes.Precedente(nomNote);
+        Note? noteObetenue = ServiceNotes.Precedente(nomNote);
 
         // Then
         Check.That(noteObetenue).IsNotNull();
@@ -118,7 +119,7 @@ internal class ServiceNotesTests
     public void Quand_Je_Cherche_La_Note_Precedente_D_Une_Note_Qui_N_Existe_Pas_J_Obtiens_Null()
     {
         // When
-        var note = ServiceNotes.Precedente("Une Note qui n'existe pas");
+        Note? note = ServiceNotes.Precedente("Une Note qui n'existe pas");
 
         // Then
         Check.That(note).IsNull();
@@ -155,10 +156,10 @@ internal class ServiceNotesTests
     [TestCase("Si", 1, "Do")]
     [TestCase("Do", 11, "Si")]
     [TestCase("Fa", -1, "Mi")]
-    public void Quand_Je_Cherche_Une_Note_A_partir_D_Une_Autre_Note_Et_D_Une_Distance_J_Obtiens_La_Note_Attendue(string nomNoteDeDepart, int distance, string nomNoteAttendue) 
+    public void Quand_Je_Cherche_Une_Note_A_partir_D_Une_Autre_Note_Et_D_Une_Distance_J_Obtiens_La_Note_Attendue(string nomNoteDeDepart, int distance, string nomNoteAttendue)
     {
         // When
-        var note = ServiceNotes.Chercher(nomNoteDeDepart, distance);
+        Note? note = ServiceNotes.Chercher(nomNoteDeDepart, distance);
 
         // Then
         Check.That(note?.Nom).IsEqualTo(nomNoteAttendue);

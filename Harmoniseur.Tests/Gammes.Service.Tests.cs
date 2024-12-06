@@ -35,10 +35,10 @@ internal class GammesServiceTests
     public void Quand_Je_Liste_Les_Notes_De_La_Gamme_De_Do_Majeur_J_Obtiens_Les_7_Notes_Non_Alterees()
     {
         // When
-        var Notes = GammesService.Lister(GammeDoMajeur).ToList();
+        List<Note> Notes = GammesService.Lister(GammeDoMajeur).ToList();
 
         // Then
-        var nomsDesNotes = Notes.Select(note => note.Nom).ToList();
+        List<string> nomsDesNotes = Notes.Select(note => note.Nom).ToList();
         Check.That(nomsDesNotes).ContainsExactly([
             "Do", "Ré", "Mi", "Fa", "Sol", "La", "Si",
         ]);
@@ -48,10 +48,10 @@ internal class GammesServiceTests
     public void Quand_Je_Liste_Les_Notes_De_La_Pentatonique_De_Do_Majeur_J_Obtiens_Les_5_Notes_Attendues()
     {
         // When
-        var Notes = GammesService.Lister(GammePentatoniqueDoMajeur).ToList();
+        List<Note> Notes = GammesService.Lister(GammePentatoniqueDoMajeur).ToList();
 
         // Then
-        var nomsDesNotes = Notes.Select(note => note.Nom).ToList();
+        List<string> nomsDesNotes = Notes.Select(note => note.Nom).ToList();
         Check.That(nomsDesNotes).ContainsExactly([
             "Do", "Ré", "Mi", "Sol", "La",
         ]);

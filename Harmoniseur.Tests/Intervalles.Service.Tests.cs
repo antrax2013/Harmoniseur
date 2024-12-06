@@ -16,7 +16,7 @@ internal class ServiceIntervallesTests
     public void Quand_Je_Cherche_Un_Intervalle_Qui_Existe_J_Obtiens_L_Intervalle_Attendu(string nomIntervalle, int distanceAttendue)
     {
         // When
-        var intervalle = ServiceIntervalles.Chercher(nomIntervalle);
+        Intervalle? intervalle = ServiceIntervalles.Chercher(nomIntervalle);
 
         // Then
         Check.That(intervalle).IsNotNull();
@@ -31,7 +31,7 @@ internal class ServiceIntervallesTests
     public void Quand_Je_Cherche_Un_Intervalle_Qui_Existe_Par_Son_Alias_J_Obtiens_L_Intervalle_Attendu(string nomIntervalle, string nomIntevalleAttendu)
     {
         // When
-        var intervalle = ServiceIntervalles.Chercher(nomIntervalle);
+        Intervalle? intervalle = ServiceIntervalles.Chercher(nomIntervalle);
 
         // Then
         Check.That(intervalle).IsNotNull();
@@ -42,7 +42,7 @@ internal class ServiceIntervallesTests
     public void Quand_Je_Cherche_Un_Intervalle_Qui_N_Existe_Pas_J_Obtiens_Null()
     {
         // When
-        var intervalle = ServiceIntervalles.Chercher("Un intervalle qui n'existe pas");
+        Intervalle? intervalle = ServiceIntervalles.Chercher("Un intervalle qui n'existe pas");
 
         // Then
         Check.That(intervalle).IsNull();

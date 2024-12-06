@@ -1,16 +1,16 @@
 # Harmoniseur
 
 ## Contexte
-Notre collégue Rémi Solla, alias tonton, a chutté lourdement durant ses vacances, lors d'une partie de pèche la Sole était glissant, elle s'est débattue, Rémi est tombé. Il sera indisponible pour une durée indéterminée. Il était le seul développeur sur cette application. 
+Notre collégue Rémi Solla, alias tonton, a chutté lourdement durant ses vacances, lors d'une partie de pèche la Sole était glissante, elle s'est débattue, Rémi est tombé. Il sera indisponible pour une durée indéterminée. Il était le seul développeur sur cette application. 
 
-Pour être franc, on l'a décommissionné, mais lorsqu'on l'a fait, on s'est rendu compte que beaucoup de monde l'utilisait. De plus on a appris que les utilisateurs attendent de nouvelles fonctionnalités. 
+Pour être franc, on l'a décommissionné, mais lorsqu'on l'a fait, on s'est rendu compte que beaucoup de monde l'utilisaient. De plus on a appris que les utilisateurs attendent de nouvelles fonctionnalités. 
 Rémi était sur le coup, on ne le savait pas. 
 En plus il n'a eu le temps pousser ses modifs dans le repos. Tu es le seul qui puisse nous aider.
 
 ## Métier
 L'application est capable à partir :  
--  d'une #note# et d'une distance en 1/2 ton de retourner la note recherchée
-- à partir d'un esemble d'#intervalles# et d'une tonique, elle est capable de donner les notes de la #gamme#
+- d'une #note# et d'une distance en 1/2 ton de retourner la note recherchée
+- à partir d'un ensemble d'#intervalles# et d'une tonique, elle est capable de donner les notes de la #gamme#
 
 ## Compléments
 Pour vous aider :

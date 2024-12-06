@@ -16,9 +16,12 @@ public static class ServiceIntervalles
 
     public static Intervalle? Chercher(string nomIntervalle)
     {
-        return _intervalle.FirstOrDefault(i => 
+        return _intervalle.FirstOrDefault(i =>
             i.Nom.Equals(nomIntervalle, StringComparison.CurrentCultureIgnoreCase)
-            || i.Alias!= null && i.Alias.ToList().Exists(a => a.Equals(nomIntervalle, StringComparison.CurrentCultureIgnoreCase))
+            || i.Alias != null
+            && i.Alias.ToList().Exists(a =>
+                    a.Equals(nomIntervalle, StringComparison.CurrentCultureIgnoreCase)
+                )
             );
     }
 }

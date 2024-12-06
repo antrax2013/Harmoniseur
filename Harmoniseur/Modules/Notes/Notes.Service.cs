@@ -25,9 +25,9 @@ public static class ServiceNotes
             || n.NomRenverse.Equals(nomNote, StringComparison.CurrentCultureIgnoreCase));
     }
 
-    public static Note? Chercher(string nomNote, int distance) 
+    public static Note? Chercher(string nomNote, int distance)
     {
-        var note = Chercher(nomNote);
+        Note? note = Chercher(nomNote);
         if (note == null)
             return null;
 
@@ -36,11 +36,11 @@ public static class ServiceNotes
 
     public static Note? Chercher(this Note note, int distance)
     {
-        var index = _notes.ToList().FindIndex(n => n.Nom.Equals(note.Nom, StringComparison.CurrentCultureIgnoreCase));
+        int index = _notes.ToList().FindIndex(n => n.Nom.Equals(note.Nom, StringComparison.CurrentCultureIgnoreCase));
         if (index == -1)
             return null;
 
-        if(distance == 0)
+        if (distance == 0)
             return note;
 
         return _notes[(index + distance) % _notes.Length];
@@ -48,7 +48,7 @@ public static class ServiceNotes
 
     public static Note? Precedente(string nomNote)
     {
-        var note = Chercher(nomNote);
+        Note? note = Chercher(nomNote);
         if (note == null)
             return null;
 
@@ -57,7 +57,7 @@ public static class ServiceNotes
 
     public static Note? Precedente(this Note note)
     {
-        var index = _notes.IndexOf(note);
+        int index = _notes.IndexOf(note);
         if (index == -1)
             return null;
         if (index == 0)
@@ -68,7 +68,7 @@ public static class ServiceNotes
 
     public static Note? Suivante(string nomNote)
     {
-        var note = Chercher(nomNote);
+        Note? note = Chercher(nomNote);
         if (note == null)
             return null;
 
@@ -77,17 +77,17 @@ public static class ServiceNotes
 
     public static Note? Suivante(this Note note)
     {
-        var index = _notes.IndexOf(note);
+        int index = _notes.IndexOf(note);
         return index == -1 ? null : _notes[(index + 1) % _notes.Length];
     }
 
     public static int? Distance(string nomNoteDeDepart, string nomNoteDArrivee)
     {
-        var noteDeDepart = Chercher(nomNoteDeDepart);
+        Note? noteDeDepart = Chercher(nomNoteDeDepart);
         if (noteDeDepart == null)
             return null;
 
-        var noteDArrivee = Chercher(nomNoteDArrivee);
+        Note? noteDArrivee = Chercher(nomNoteDArrivee);
         if (noteDArrivee == null)
             return null;
 
@@ -97,8 +97,8 @@ public static class ServiceNotes
 
     public static int? Distance(this Note noteDeDepart, Note noteDArrivee)
     {
-        var indexDeDepart = _notes.IndexOf(noteDeDepart);
-        var indexDArrivee = _notes.IndexOf(noteDArrivee);
+        int indexDeDepart = _notes.IndexOf(noteDeDepart);
+        int indexDArrivee = _notes.IndexOf(noteDArrivee);
 
         if (indexDeDepart == -1 || indexDArrivee == -1)
             return null;
